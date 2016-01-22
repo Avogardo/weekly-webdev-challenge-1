@@ -1,0 +1,473 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+font-family: 'TitilliumText22L-Light';
+font-style: normal;
+font-weight: normal;
+src: local('TitilliumText22L-Light'), url('../fonts/TitilliumText22L002.woff') format('woff');
+}
+
+@font-face {
+font-family: 'TitilliumText22L-Regular';
+font-style: normal;
+font-weight: normal;
+src: local('TitilliumText22L-Regular'), url('../fonts/TitilliumText22L003.woff') format('woff');
+}
+
+body{
+    background-image:url(../images/background.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.header{
+    width: 430px;
+    margin: 55px auto 25px auto;
+    height: 111px;
+    display: table;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+    position: relative;
+    -webkit-transition: opacity 150ms;
+            transition: opacity 150ms;
+}
+.header:hover{
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.logo{
+    width: 112px;
+    height: 111px;
+    background-image: url(../images/logo.png);
+    margin-right: 24px;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+.company-name{
+    width: 293px;
+    height: 78px;
+    background-image: url(../images/company-name.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: table-cell;
+    vertical-align: middle;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+td .company-name{
+   background-size: 100% 100%;
+}
+.web-page{
+    background-image: url(../images/web-page.png);
+    background-size: 100% 100%;
+    width: 246px;
+    height:16px;
+    margin: 34px auto 0 auto;
+}
+.forms-container{
+    margin: 0 auto;
+    width: 940px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.form{
+    width: 420px;
+    margin-bottom: 60px;
+}
+.form h1{
+    text-align: center;
+    margin: 0 0 38px 0;
+    font-family: 'TitilliumText22L-Regular';
+    font-weight: 500;
+    text-shadow: 1px 2px 2px rgba(43, 1, 0, 0.75);
+    color: white;
+    font-size: 32px;
+}
+
+.clearfix:after{
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both;
+}
+.container{
+    margin: 20px;
+    background-color: #f4f4f4;
+    border-radius: 3px;
+    padding: 22px;
+    position: relative;
+}
+.container:before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    border: 20px rgba(0, 0, 0, 0.23) solid;
+    border-radius: 3px;
+    z-index: -1;
+}
+
+
+input, select, select option, textarea[name="message"]{
+    font: 300 16px 'TitilliumText22L-Light';
+}
+
+.input-row{
+    width: 100%;
+    height: 39px;
+    background-color: #f8f8f8;
+    margin-bottom: 21px;
+    border-radius: 3px;
+    border: solid 1px #c3c3c3;
+    box-shadow: inset 0px -20px 43px -40px rgba(0,0,0,0.75);
+}
+
+
+.input-row .icon{
+    position: relative;
+    float: left;
+    width: 58px;
+    height: 39px;
+}
+.input-row .icon:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 9%;
+    right: 0;
+    width: 2px;
+    height: 82%;
+    background-color: #dedede;
+    border-radius: 8px;
+}
+.input{
+    margin-left: 58px;
+    padding-left: 22px;
+}
+.input input{
+    margin-left: -22px;
+    padding-left: 22px;
+    width: 100%;
+    border: none;
+    height: 39px;
+    background-color: transparent;
+}
+
+.select{
+        padding: 0;
+}
+.select select{
+    padding-left: 18px;
+    width: 100%;
+    border: none;
+    height: 39px;
+    color: #afafaf;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    background-image:url(../images/arrow-down.png);
+    background-position: right 15px center;
+    background-repeat: no-repeat;
+}
+
+select::-ms-expand{
+    display: none;
+}
+.input-row option{
+    color: #000;
+    width: 278px !important;
+}
+.input-row option:first-child{
+    color: #c3c3c3;
+}
+.username .icon{
+    background-image:url(../images/icon_user.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.password .icon{
+    background-image: url(../images/icon_password.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.email .icon{
+    background-image: url(../images/icon_email.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.location .icon{
+    background-image: url(../images/icon_location.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.phone .icon{
+    background-image:url(../images/icon_phone.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.input-label{
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.input-label label{
+    color:#afafaf;
+    font-family: 'TitilliumText22L-Regular';
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.label-remember_me{
+    line-height: 40px;
+    margin-bottom: 0;
+}
+input[type="checkbox"] {
+    display:none;
+}
+
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:22px;
+    height:22px;
+    margin-right: 15px;
+    vertical-align:middle;
+    cursor:pointer;
+    border: solid 1px #c3c3c3;
+    border-radius: 5px;
+}
+input[type="checkbox"]:checked + label span {
+    background:url(../images/checkbox_checked.png) center no-repeat;
+}
+
+textarea[name="message"]{
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    word-break: break-word;
+    line-height: 20px;
+    height: 203px;
+    padding: 14px;
+    margin-bottom: 16px;
+    border-radius: 3px;
+    border: solid 1px #c3c3c3;
+    color:#000;
+    background-color: transparent;
+}
+.on-right{
+    float: right;
+}
+.on-left{
+    float: left;
+}
+.btn{
+    box-sizing: border-box;
+    font: 500 24px 'TitilliumText22L-Regular';
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 1px 2px 0px #51850e;
+    height: 48px;
+    line-height: 48px;
+    border-radius: 3px;
+    border: 1px solid #3a9a00;
+}
+.btn:hover{
+    cursor:pointer;
+}
+.btn:disabled{
+    background-color: #bcdb97;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    border: 1px solid #90ca6d;
+    cursor: auto;
+}
+.btn-big{
+    width: 100%;
+}
+.btn-small{
+    width: 140px;
+    height: 41px;
+    font-size: 18px;
+    line-height: 18px;
+}
+.btn-active{
+    box-shadow: inset 0px -20px 90px -50px rgba(0,0,0,0.75);
+    background-color: #93d02b;
+}
+.btn-active:active{
+    box-shadow: inset 0px 20px 90px -50px rgba(0,0,0,0.75);
+}
+.btn-decline{
+    box-shadow: inset 0px 50px 80px -60px rgba(255,255,255,1);
+    background-color: #f4495b;
+}
+.btn-decline:active{
+    box-shadow: inset 0px -50px 80px -60px rgba(255,255,255,1);
+}
+
+
+.footer{
+    width: 364px;
+    margin: 51px auto 15px auto;
+    height: 111px;
+    display: table;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+    position: relative;
+    -webkit-transition: opacity 150ms;
+            transition: opacity 150ms;
+}
+.footer:hover{
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+.footer .logo{
+    width: 75px;
+    height: 74px;
+    margin-right: 15px;
+    background-size: 100%;
+}
+.footer .web-page{
+    background-image: url(../images/web-page.png);
+    background-size: 100% 100%;
+    width: 246px;
+    height:16px;
+    margin: 34px auto 0 auto;
+}
+.footer .company-name{
+    background-size: 100% 100%;
+    width: 263px;
+    height:70px;
+}
+
+
+@media screen and (max-width: 960px) {
+    .forms-container{
+        width:750px;
+    }
+    .form{
+        width: 364px;
+    }
+    .btn-small{
+        width: 120px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .forms-container{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        width: 100%;
+    }
+    .form{
+        width: 100%;
+    }
+    .container{
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 545px) {
+    .container{
+        width: 70%;
+    }
+    input, select, select option, textarea[name="message"]{
+        font: 300 13px 'TitilliumText22L-Light';
+    }
+    .input-label label{
+        font-size: 14px;
+    }
+    
+    .input{
+    padding-left: 12px;
+    }
+    .input input{
+    margin-left: -12px;
+    padding-left: 12px;
+    }
+    
+    .select select{
+    padding-left: 10px;
+    }
+    
+    .form h1{
+        font-size:26px;
+        margin-bottom: 30px;
+    }
+    
+    input[type="checkbox"] + label span{
+        margin-right: 8px;
+    }
+    .header{
+        width: 300px;
+        height: 100px;
+        margin: 35px auto 25px auto;
+    }
+
+    .logo{
+        width: 90px;
+        height: 90px;
+        margin-right: 16px;
+        opacity: 1;
+        filter: alpha(opacity=100);
+        background-size: 100%;
+    }
+    .company-name{
+        width: 190px;
+        height: 55px;
+        background-size: 100%;
+    }
+   
+    .footer{
+        width: 220px;
+    }
+    .footer .logo{
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+    }
+    .footer .web-page{
+        width: 160px;
+        height:13px;
+        margin: 14px auto 0 auto;
+    }
+    .footer .company-name{ 
+        width: 140px;
+        height:43px;
+    }
+    
+    .btn{
+        font-size: 16px;
+        line-height: 16px;
+    }
+    
+    .btn-small{
+        width: 90px;
+    }
+    
+}
