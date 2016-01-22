@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo"></div>
+        <div class="company-name"></div>
+    </div>
+    <div class="forms-container">
+       <div class="column">
+            <div class="form">
+                <h1>Register Form</h1>
+                <div class="container">
+                    <form id="register">
+                       
+                        <div class="input-row username">
+                            <div class="icon"></div>
+                            <div class="input">
+                                <input type="text" name="username" placeholder="Username">
+                            </div>
+                        </div>
+                        
+                        <div class="input-row password">
+                            <div class="icon"></div>
+                            <div class="input">
+                                <input type="password"  name="password"placeholder="Password">
+                            </div>
+                        </div>
+                        
+                        <div class="input-row password">
+                            <div class="icon"></div>
+                            <div class="input">
+                                <input type="password" name="re-password" placeholder="Confirm Password">
+                            </div>
+                        </div>
+                        
+                        <div class="input-row email">
+                            <div class="icon"></div>
+                            <div class="input">
+                                <input type="email" name="email" placeholder="Email">
+                            </div>
+                        </div>
+                        
+                        <div class="input-row location">
+                            <div class="icon"></div>
+                               <div class="input select">
+                                <select name="location">
+                                    <option value="" disabled selected class="first">Your Location</option>
+                                    <option value="polska">Chiny</option>
+                                </select>
+                                </div>
+                        </div>
+                        
+                        <div class="input-label">
+                            <input type="checkbox" id="terms" name="terms" value="terms">
+                            <label for="terms"><span></span>I have read and accept the terms of use.</label>
+                        </div>
+                        
+                        <button class="btn btn-active btn-big" type="submit" form="register">Sing up</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="form">
+                <h1>Send Email</h1>
+                <form action="" id="send_email">
+                    <div class="container">
+                       
+                        <div class="input-row username">
+                            <div class="icon"></div>
+                            <div class="input">
+                                <input type="text" name="username" placeholder="Your Name">
+                            </div>
+                        </div>
+                        
+                        <div class="input-row email">
+                            <div class="icon"></div>
+                            <div class="input">
+                                <input type="email" name="email" placeholder="Your Email">
+                            </div>
+                        </div>
+                        
+                        
+                            <textarea form="send_email" name="message" placeholder="Type your message ..."></textarea>
+                        
+                        
+                        <div class="input-label">
+                            <input type="checkbox" id="send_copy" name="send_copy" value="send_copy">
+                            <label for="send_copy"><span></span>Send a copy to my Email</label>
+                        </div>
+                        
+                        <button class="btn btn-active btn-big" type="submit" form="send_email">Send Email</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="column">
+            
+            <div class="form">
+                <h1>Sign In Form</h1>
+                <div class="container">
+                   <form class="clearfix" action="" id="sign_in">
+                      
+                       <div class="input-row username">
+                            <div class="icon"></div>
+                            <div class="input">
+                                <input type="text" name="username" placeholder="Username">
+                            </div>
+                        </div>
+                        
+                       <div class="input-row password">
+                            <div class="icon"></div>
+                            <div class="input">
+                                <input type="password" name="password" placeholder="Password">
+                           </div>
+                        </div>
+                        
+                        <div class="input-label on-left label-remember_me">
+                            <input type="checkbox" id="remember_me" name="remember_me" value="remember_me">
+                            <label for="remember_me"><span></span>Remember me</label>
+                        </div>
+                         
+                        <button class="btn btn-active btn-small on-right" type="submit" form="sign_in">Sing In</button>
+                    
+                   </form>
+                </div>
+            </div>
+            
+            <div class="form">
+                <h1>Recover Form</h1>
+                <div class="container">
+                   <form class="clearfix" action="" id="recover">
+                      
+                       <div class="input-row email">
+                            <div class="icon"></div>
+                            <div class="input">
+                                <input type="email" name="email" placeholder="Enter your Email">
+                           </div>
+                        </div>
+                        
+                       <div class="input-row phone">
+                            <div class="icon"></div>
+                            <div class="input">
+                                <input type="tel" name="tel" placeholder="Enter your Phone number">
+                           </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-active btn-small on-left" form="recover">Send</button>
+                        <button type="submit" class="btn btn-active btn-small on-right" form="recover" disabled>Done</button>
+                   </form>
+                </div>
+            </div>
+            
+            <div class="form">
+                <h1>Subscribe Form</h1>
+                <div class="container">
+                   <form class="clearfix" action="" id="subscribe">
+                      
+                       <div class="input-row email">
+                            <div class="icon"></div>
+                            <div class="input">
+                                <input type="email" name="email" placeholder="Enter your Email">
+                           </div>
+                        </div>
+                            
+                        <button type="submit" class="btn btn-active btn-small on-left" form="subscribe">Subscribe</button>
+                        <button type="submit" class="btn btn-decline btn-small on-right" form="subscribe">No, Thanks</button>
+                   </form>
+                </div>
+            </div>
+            
+            <div class="header">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><div class="logo"></div></td>
+                            <td><div class="company-name"></div></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><div class="web-page"></div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
