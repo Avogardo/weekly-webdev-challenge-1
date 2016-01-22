@@ -29,11 +29,14 @@ body{
     height: 111px;
     display: table;
     opacity: 0.3;
+    filter: alpha(opacity=30);
     position: relative;
-    transition: opacity 150ms;
+    -webkit-transition: opacity 150ms;
+            transition: opacity 150ms;
 }
 .header:hover{
     opacity: 1;
+    filter: alpha(opacity=100);
 }
 
 .logo{
@@ -42,6 +45,7 @@ body{
     background-image: url(../images/logo.png);
     margin-right: 24px;
     opacity: 1;
+    filter: alpha(opacity=100);
 }
 .company-name{
     width: 293px;
@@ -52,6 +56,7 @@ body{
     display: table-cell;
     vertical-align: middle;
     opacity: 1;
+    filter: alpha(opacity=100);
 }
 td .company-name{
    background-size: 100% 100%;
@@ -66,15 +71,20 @@ td .company-name{
 .forms-container{
     margin: 0 auto;
     width: 940px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .form{
     width: 420px;
     margin-bottom: 60px;
-} 
-
+}
 .form h1{
     text-align: center;
     margin: 0 0 38px 0;
@@ -98,7 +108,7 @@ td .company-name{
     padding: 22px;
     position: relative;
 }
-.container::before{
+.container:before{
     content: '';
     display: block;
     width: 100%;
@@ -112,7 +122,7 @@ td .company-name{
 }
 
 
-input, select, select option{
+input, select, select option, textarea[name="message"]{
     font: 300 16px 'TitilliumText22L-Light';
 }
 
@@ -123,8 +133,6 @@ input, select, select option{
     margin-bottom: 21px;
     border-radius: 3px;
     border: solid 1px #c3c3c3;
-    -webkit-box-shadow: inset 0px -20px 83px -40px rgba(0,0,0,0.75);
-    -moz-box-shadow: inset 0px -20px 83px -40px rgba(0,0,0,0.75);
     box-shadow: inset 0px -20px 43px -40px rgba(0,0,0,0.75);
 }
 
@@ -135,7 +143,7 @@ input, select, select option{
     width: 58px;
     height: 39px;
 }
-.input-row .icon::before{
+.input-row .icon:before{
     content: '';
     display: block;
     position: absolute;
@@ -164,7 +172,7 @@ input, select, select option{
         padding: 0;
 }
 .select select{
-    padding-left: 22px;
+    padding-left: 18px;
     width: 100%;
     border: none;
     height: 39px;
@@ -262,7 +270,6 @@ textarea[name="message"]{
     height: 203px;
     padding: 14px;
     margin-bottom: 16px;
-    font-size: 16px;
     border-radius: 3px;
     border: solid 1px #c3c3c3;
     color:#afafaf;
@@ -291,6 +298,7 @@ textarea[name="message"]{
 .btn:disabled{
     background-color: #bcdb97;
     opacity: 0.8;
+    filter: alpha(opacity=80);
     border: 1px solid #90ca6d;
     cursor: auto;
 }
@@ -304,41 +312,76 @@ textarea[name="message"]{
     line-height: 18px;
 }
 .btn-active{
-    -webkit-box-shadow: inset 0px -20px 90px -50px rgba(0,0,0,0.75);
-    -moz-box-shadow: inset 0px -20px 90px -50px rgba(0,0,0,0.75);
     box-shadow: inset 0px -20px 90px -50px rgba(0,0,0,0.75);
     background-color: #93d02b;
 }
 .btn-active:active{
-    -webkit-box-shadow: inset 0px 20px 90px -50px rgba(0,0,0,0.75);
-    -moz-box-shadow: inset 0px 20px 90px -50px rgba(0,0,0,0.75);
     box-shadow: inset 0px 20px 90px -50px rgba(0,0,0,0.75);
 }
 .btn-decline{
-    -webkit-box-shadow: inset 0px 50px 80px -60px rgba(255,255,255,1);
-    -moz-box-shadow: inset 0px 50px 80px -60px rgba(255,255,255,1);
     box-shadow: inset 0px 50px 80px -60px rgba(255,255,255,1);
     background-color: #f4495b;
 }
 .btn-decline:active{
-    -webkit-box-shadow: inset 0px -50px 80px -60px rgba(255,255,255,1);
-    -moz-box-shadow: inset 0px -50px 80px -60px rgba(255,255,255,1);
     box-shadow: inset 0px -50px 80px -60px rgba(255,255,255,1);
 }
+
+
+.footer{
+    width: 364px;
+    margin: 51px auto 15px auto;
+    height: 111px;
+    display: table;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+    position: relative;
+    -webkit-transition: opacity 150ms;
+            transition: opacity 150ms;
+}
+.footer:hover{
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+.footer .logo{
+    width: 75px;
+    height: 74px;
+    margin-right: 15px;
+    background-size: 100%;
+}
+.footer .web-page{
+    background-image: url(../images/web-page.png);
+    background-size: 100% 100%;
+    width: 246px;
+    height:16px;
+    margin: 34px auto 0 auto;
+}
+.footer .company-name{
+    background-size: 100% 100%;
+    width: 263px;
+    height:70px;
+}
+
 
 @media screen and (max-width: 960px) {
     .forms-container{
         width:750px;
     }
     .form{
-        width: 360px;
+        width: 364px;
+    }
+    .btn-small{
+        width: 120px;
     }
 }
 
 
 @media screen and (max-width: 768px) {
     .forms-container{
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
         width: 100%;
     }
     .form{
@@ -350,5 +393,82 @@ textarea[name="message"]{
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 545px) {
+    .container{
+        width: 70%;
+    }
+    input, select, select option, textarea[name="message"]{
+        font: 300 13px 'TitilliumText22L-Light';
+    }
+    .input-label label{
+        font-size: 14px;
+    }
+    
+    .input{
+    padding-left: 12px;
+    }
+    .input input{
+    margin-left: -12px;
+    padding-left: 12px;
+    }
+    
+    .select select{
+    padding-left: 10px;
+    }
+    
+    .form h1{
+        font-size:26px;
+        margin-bottom: 30px;
+    }
+    
+    input[type="checkbox"] + label span{
+        margin-right: 8px;
+    }
+    .header{
+        width: 300px;
+        height: 100px;
+        margin: 35px auto 25px auto;
+    }
+
+    .logo{
+        width: 90px;
+        height: 90px;
+        margin-right: 16px;
+        opacity: 1;
+        filter: alpha(opacity=100);
+        background-size: 100%;
+    }
+    .company-name{
+        width: 190px;
+        height: 55px;
+        background-size: 100%;
+    }
+   
+    .footer{
+        width: 220px;
+    }
+    .footer .logo{
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+    }
+    .footer .web-page{
+        width: 160px;
+        height:13px;
+        margin: 14px auto 0 auto;
+    }
+    .footer .company-name{ 
+        width: 140px;
+        height:43px;
+    }
+    
+    .btn{
+        font-size: 16px;
+        line-height: 16px;
+    }
+    
+    .btn-small{
+        width: 90px;
+    }
+    
 }
