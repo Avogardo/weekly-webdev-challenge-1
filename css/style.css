@@ -165,7 +165,6 @@ input, select, select option, textarea[name="message"]{
     border: none;
     height: 39px;
     background-color: transparent;
-    color: #afafaf;
 }
 
 .select{
@@ -272,7 +271,7 @@ textarea[name="message"]{
     margin-bottom: 16px;
     border-radius: 3px;
     border: solid 1px #c3c3c3;
-    color:#afafaf;
+    color:#000;
     background-color: transparent;
 }
 .on-right{
